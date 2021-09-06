@@ -3,7 +3,7 @@ import React from "react";
 import './Definitions.css'
 
 
-const Definitions = ({ word, meanings }) => {
+const Definitions = ({ word, meanings, LightTheme}) => {
 	console.log({ meanings })
 	console.log({ word })
 
@@ -17,10 +17,13 @@ const Definitions = ({ word, meanings }) => {
 			{meanings[0] && word  && (
 				<audio
 					style={{
-						backgroundColor: "#fff", borderRadius: 10,
-						width: "auto"
+						// backgroundColor: "#fff",
+						borderRadius: 10,
+						width: "auto",
+						backgroundColor: LightTheme ? "#3b5360" : "white",
+						color: LightTheme ? "white" : "black",
 					}}
-					className = "singleAudio"
+					// className= "singleMean"
 					src={meanings[0].phonetics[0] && meanings[0].phonetics[0].audio}
 					controls
 				>
@@ -38,7 +41,11 @@ const Definitions = ({ word, meanings }) => {
 							// console.log({ def })
 							<div
 								className='singleMean'
-								style={{ backgroundColor: "white", color: "black" }} >
+								style={{
+									// backgroundColor: "white", color: LightTheme ? "white" : "black"
+									backgroundColor: LightTheme ? "#3b5360" : "white",
+									color: LightTheme ? "white" : "black",
+								}} >
 								<b> {def.definition} </b>
 
 

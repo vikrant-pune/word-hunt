@@ -7,16 +7,16 @@ import {
 import './Header.css'
 import categories from '../../data/category';
 
-const Header = ({ setCategory, category, word, setWord}) => {
+const Header = ({ setCategory, category, word, setWord, LightTheme,
+}) => {
 
 	const darkTheme = createTheme({
 		palette: {
-			type: 'dark',
 			primary: {
-				main: '#fff'
-			}
+				main: LightTheme ? "#000" : "#fff",
+			},
+			type: LightTheme ? "light" : "dark",
 		},
-
 	});
 
 
@@ -37,7 +37,7 @@ const Header = ({ setCategory, category, word, setWord}) => {
 						className="search"
 						label="Search a word"
 						value={word}
-						onChange ={(e) => setWord(e.target.value)}
+						onChange={(e) => setWord(e.target.value)}
 					/>
 
 					<TextField

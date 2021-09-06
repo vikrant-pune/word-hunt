@@ -8,6 +8,7 @@
   border-radius: 10px;
   padding: 10px 20px;
   overflow-x: hidden;
+  /* justify-content: safe; */
 }
 
 .subTitle {
@@ -31,6 +32,11 @@
 }
 
 .singleAudio{
-	display: flex;
+  display: flex;
   flex-direction: column;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  height: 54px;
+  /* justify-content: safe; */
 }
