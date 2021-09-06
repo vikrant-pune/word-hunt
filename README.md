@@ -1,3 +1,9 @@
+# Intro
+
+This is very basic UI app which is hosted on https://word-def.netlify.app/
+It's using dictionaryapi and thanks to https://www.youtube.com/watch?v=ToXna81iij0&t=4838s
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
