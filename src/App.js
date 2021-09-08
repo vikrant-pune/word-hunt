@@ -7,6 +7,8 @@ import './App.css';
 import Definitions from './components/Definitions/Definitions';
 import Header from './components/header/Header';
 
+import ReactGoogleSheets from './components/Update/Update_def';
+
 function App() {
 
   const [word, setWord] = useState("");
@@ -98,8 +100,10 @@ function App() {
           />
         )}
 
+        <ReactGoogleSheets/>
+
       </Container>
     </div>);
 }
-
+`````
 export default App;
